@@ -29,7 +29,7 @@ extension SplashViewController: SplashViewModelDelegate {
      
     func notConnectedToInternet() {
         self.showAlert(with: { configuration in
-            configuration.title = "Internet Connection Yok Kardeş"
+            configuration.title = "You are not connected to internet"
         }, action: { _ in
             exit(0)
         })

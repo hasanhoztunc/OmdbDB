@@ -11,5 +11,6 @@ let app = AppContainer()
 
 final class AppContainer {
     let appConfiguration = AppConfig.shared
+    let service = Service.shared
     let router = AppRouter()
 }

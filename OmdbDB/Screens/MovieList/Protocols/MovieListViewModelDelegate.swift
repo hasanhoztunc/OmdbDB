@@ -8,5 +8,6 @@
 import Foundation
 
 protocol MovieListViewModelDelegate: ViewModelDelegate {
-    
+    func loadMovies(with viewModels: [MovieTableViewCellViewModel])
+    func navigateToDetail(with movie: MovieSearchModel)
 }

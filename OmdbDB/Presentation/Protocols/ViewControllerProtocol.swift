@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ViewControllerProtocol {
-    
+    func showIndicator()
+    func hideIndicator()
 }

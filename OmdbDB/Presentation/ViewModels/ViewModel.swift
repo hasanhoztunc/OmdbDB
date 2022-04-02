@@ -16,4 +16,18 @@ open class ViewModel: NSObject {
     func prepare() {
         
     }
+    
+    func showIndicator(in viewController: ViewModelDelegate?) {
+        if (viewController as AnyObject?) is ViewControllerProtocol {
+            let vc = viewController as! ViewControllerProtocol
+            vc.showIndicator()
+        }
+    }
+    
+    func hideIndicator(in viewController: ViewModelDelegate?) {
+        if (viewController as AnyObject?) is ViewControllerProtocol {
+            let vc = viewController as! ViewControllerProtocol
+            vc.hideIndicator()
+        }
+    }
 }

@@ -26,8 +26,10 @@ extension UIViewController {
         }
     }
     
-    func pushStoryboard(with storyboardName: Storyboards) {
+    func pushStoryboard(with storyboardName: Storyboards,
+                        configuration: (UIViewController) -> Void = { _ in }) {
         let storyboard = UIStoryboard.initializeViewController(from: storyboardName)
+        configuration(storyboard)
         self.navigationController?.pushViewController(storyboard, animated: true)
     }
 }
